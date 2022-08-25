@@ -1,0 +1,48 @@
+<html>
+    <head>
+        
+        <title>login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Geek Hardwares</title>
+
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="/css/CustomerLoginCss.css">
+
+        
+    </head>
+
+<body>
+    <%-include("../partial/customer/Navigation.ejs")%>
+    <div class="form-body">
+      <div class="row" style="margin-left:30%">
+          <div class="form-holder">
+              <div class="form-content">
+                  <div class="form-items">
+                      <h3 class="text-center">Login Form</h3>
+                      
+                      <form action="/customer/login" method="post">
+
+                          <div class="col-md-12">
+                          <input onkeyup="validEmail()" id="email" class="form-control" type="email" name="email" placeholder="Enter Email" autocomplete="off">
+                          <small id="emailErr"></small>
+                          </div>
+
+                          <div class="col-md-12">
+                              <input onkeyup="validEmail()" id="email" class="form-control" type="password" name="password" placeholder="Enter Password" autocomplete="off">
+                              <small id="emailErr"></small>
+                              </div>
+
+                          <div class="form-button mt-3">
+                              <button onclick="return validRegister()" id="submit" type="submit" class="btn btn-primary text-center ml-3">LOGIN</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>    
+    
+</body>
+</html>
